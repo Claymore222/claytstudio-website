@@ -385,3 +385,213 @@ header nav a.active {
         margin-top: 20px;
     }
 }
+/* ========================================= */
+/* PROJELER SAYFASI STİLLERİ */
+/* ========================================= */
+
+/* Filtreleme Navigasyonu */
+.filter-section {
+    background: #2a2a4e;
+    padding: 20px 0;
+    border-bottom: 1px solid #3a3a5e;
+}
+
+.filter-nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.filter-btn {
+    background: #1a1a2e;
+    color: #e0e0e0;
+    border: 2px solid #5a5a7e;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+    background: #5a5a7e;
+    color: #ffffff;
+}
+
+/* Aktif filtre butonu */
+.filter-btn.active {
+    background: #6a05ad;
+    color: #ffffff;
+    border-color: #9d50e8;
+}
+
+/* Proje Kartları (Galeri) */
+.projects-gallery {
+    padding: 40px 0;
+}
+
+.project-grid-interactive {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.project-card-interactive {
+    background: #2a2a4e;
+    border-radius: 10px;
+    overflow: hidden; /* Resmin taşmasını engelle */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+    display: block; /* JS ile bunu 'none' yapacağız */
+}
+
+/* Kartın gizlenme/gösterilme animasyonu (Filtreleme için) */
+.project-card-interactive.hidden {
+    transform: scale(0.8);
+    opacity: 0;
+    display: none;
+}
+
+
+.project-card-interactive .card-image {
+    position: relative;
+    height: 200px;
+}
+
+.project-card-interactive .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Resmin boyutu bozulmasın */
+}
+
+.card-status {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(106, 5, 173, 0.8); /* Mor */
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    backdrop-filter: blur(5px); /* "Gamer" efekti :) */
+}
+
+.card-status.yayinda {
+    background: rgba(20, 150, 50, 0.8); /* Yeşil */
+}
+
+.project-card-interactive .card-content {
+    padding: 20px;
+}
+
+.project-card-interactive h3 {
+    font-size: 1.8rem;
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.project-card-interactive p {
+    font-size: 1rem;
+    color: #cccccc;
+    min-height: 60px; /* Kartların boyutu eşitlensin */
+}
+
+.btn-details {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    background: #6a05ad;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-align: center;
+    transition: background 0.3s ease;
+}
+
+.btn-details:hover {
+    background: #9d50e8;
+}
+
+/* ========================================= */
+/* MODAL (POP-UP) STİLLERİ */
+/* ========================================= */
+
+.modal {
+    display: none; /* JS ile 'block' yapacağız */
+    position: fixed; /* Ekranı kapla */
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Kaydırma çubuğu */
+    background-color: rgba(0, 0, 0, 0.85); /* Arka plan karartma */
+    backdrop-filter: blur(5px);
+    animation: fadeIn 0.3s; /* Açılış animasyonu */
+}
+
+.modal-content {
+    background-color: #2a2a4e;
+    margin: 5% auto; /* Ortala */
+    padding: 30px;
+    border: 1px solid #5a5a7e;
+    width: 70%;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+    position: relative;
+    animation: slideDown 0.4s;
+}
+
+.modal-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.modal-content h2 {
+    font-size: 2.5rem;
+    color: #9d50e8;
+    margin-top: 0;
+}
+
+.modal-content p {
+    font-size: 1.1rem;
+    color: #e0e0e0;
+    line-height: 1.7;
+}
+
+.modal-close {
+    color: #aaaaaa;
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+    color: #ffffff;
+}
+
+/* Animasyonlar */
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes slideDown {
+    from {transform: translateY(-50px); opacity: 0;}
+    to {transform: translateY(0); opacity: 1;}
+}

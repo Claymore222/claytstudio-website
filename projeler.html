@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeler - Clayt Studio</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Clayt Studio</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Ana Sayfa</a></li>
+                    <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                    <li><a href="projeler.html" class="active">Projeler</a></li>
+                    <li><a href="#">İletişim</a></li> 
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-title">
+        <div class="container">
+            <h1>Geliştirdiğimiz Dünyalar</h1>
+        </div>
+    </section>
+
+    <section class="filter-section">
+        <div class="container">
+            <nav class="filter-nav">
+                <button class="filter-btn active" data-filter="tumu">Tümü</button>
+                <button class="filter-btn" data-filter="pc">PC Oyunları</button>
+                <button class="filter-btn" data-filter="mobil">Mobil Oyunlar</button>
+                <button class="filter-btn" data-filter="roblox">Roblox Deneyimleri</button>
+            </nav>
+        </div>
+    </section>
+
+    <section class="projects-gallery">
+        <div class="container project-grid-interactive">
+
+            <div class="project-card-interactive" data-category="pc">
+                <div class="card-image">
+                    <img src="https://via.placeholder.com/400x300?text=Proje+Alpha+(PC)" alt="Proje Alpha">
+                    <div class="card-status">Geliştiriliyor</div>
+                </div>
+                <div class="card-content">
+                    <h3>Proje Alpha</h3>
+                    <p>Unreal Engine 5 ile geliştirilen, yüksek grafikli bir hayatta kalma deneyimi.</p>
+                    <button class="btn-details" data-modal-target="#modal-proje1">Detayları Gör</button>
+                </div>
+            </div>
+
+            <div class="project-card-interactive" data-category="roblox">
+                <div class="card-image">
+                    <img src="https://via.placeholder.com/400x300?text=Roblox+Obby" alt="Roblox Obby">
+                    <div class="card-status yayinda">Yayında</div>
+                </div>
+                <div class="card-content">
+                    <h3>Zorlu Parkur (Obby)</h3>
+                    <p>Lua ile kodlanan, 100+ seviyeli ve zaman rekorları olan bir Roblox parkur oyunu.</p>
+                    <button class="btn-details" data-modal-target="#modal-proje2">Detayları Gör</button>
+                </div>
+            </div>
+
+            <div class="project-card-interactive" data-category="mobil">
+                <div class="card-image">
+                    <img src="https://via.placeholder.com/400x300?text=Puzzle+Master" alt="Puzzle Master">
+                    <div class="card-status">Planlanıyor</div>
+                </div>
+                <div class="card-content">
+                    <h3>Puzzle Master</h3>
+                    <p>Bağımlılık yaratan, C# (Unity) ile geliştirilen minimalist bir bulmaca oyunu.</p>
+                    <button class="btn-details" data-modal-target="#modal-proje3">Detayları Gör</button>
+                </div>
+            </div>
+
+            <div class="project-card-interactive" data-category="pc">
+                <div class="card-image">
+                    <img src="https://via.placeholder.com/400x300?text=Project+Chimera" alt="Project Chimera">
+                    <div class="card-status">Geliştiriliyor</div>
+                </div>
+                <div class="card-content">
+                    <h3>Project Chimera</h3>
+                    <p>Python tabanlı (Ren'Py) bir interaktif hikaye ve görsel roman projesi.</p>
+                    <button class="btn-details" data-modal-target="#modal-proje4">Detayları Gör</button>
+                </div>
+            </div>
+
+             </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Clayt Studio. Tüm Hakları Saklıdır.</p>
+        </div>
+    </footer>
+
+
+    <div id="modal-proje1" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" data-modal-close="#modal-proje1">&times;</span>
+            <img src="https://via.placeholder.com/800x400?text=Proje+Alpha+Banner" alt="" class="modal-img">
+            <h2>Proje Alpha</h2>
+            <p>Bu projede, oyuncular zorlu bir dünyada tek başına hayatta kalmaya çalışıyor. Gelişmiş yapay zeka ve dinamik hava koşulları ile donatılan 'Proje Alpha', PC platformu için Unreal Engine 5'in sınırlarını zorluyor. Erken erişim 2026'da planlanıyor.</p>
+            <a href="#" class="cta-button" target="_blank">Steam'de İncele</a>
+        </div>
+    </div>
+
+    <div id="modal-proje2" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" data-modal-close="#modal-proje2">&times;</span>
+            <img src="https://via.placeholder.com/800x400?text=Roblox+Parkur+Banner" alt="" class="modal-img">
+            <h2>Zorlu Parkur (Obby)</h2>
+            <p>Lua programlama dilini kullanarak hazırladığımız bu deneyimde, oyuncular 100'den fazla zorlu parkuru geçmeye çalışıyor. En hızlı bitirenler için global bir liderlik tablosu (leaderboard) bulunmakta. Hemen şimdi ücretsiz oyna!</p>
+            <a href="#" class="cta-button" target="_blank">Roblox'ta Oyna</a>
+        </div>
+    </div>
+
+    <div id="modal-proje3" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" data-modal-close="#modal-proje3">&times;</span>
+            <img src="https://via.placeholder.com/800x400?text=Puzzle+Master+Banner" alt="" class="modal-img">
+            <h2>Puzzle Master</h2>
+            <p>Mobil platformlar için tasarlanan bu minimalist bulmaca oyununda amaç, en az hamle ile tüm kareleri aynı renge getirmek. Basit görünüyor ama zekanızı zorlayacak 200'den fazla seviye sizi bekliyor. C# (Unity) ile geliştirme aşamasında.</p>
+            <a href="#" class="cta-button" target="_blank">Dev Log'u Takip Et</a>
+        </div>
+    </div>
+
+    <div id="modal-proje4" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" data-modal-close="#modal-proje4">&times;</span>
+            <img src="https://via.placeholder.com/800x400?text=Chimera+Banner" alt="" class="modal-img">
+            <h2>Project Chimera</h2>
+            <p>Seçimlerinizin hikayeyi kökten değiştirdiği, karanlık temalı bir görsel roman. Python (Ren'Py) motoru ile geliştirilen bu projede, verdiğiniz her karar sizi farklı bir sona götürecek. Derin karakter analizleri ve dallanan bir hikaye örgüsü sunar.</p>
+            <a href="#" class="cta-button" target="_blank">Itch.io'da İncele</a>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script> 
+</body>
+</html>
