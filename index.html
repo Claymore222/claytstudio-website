@@ -3,15 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clayt Studio</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <title>Clayt Studio - Hakkımızda</title>
+    <link rel="stylesheet" href="style.css"> </head>
 <body>
-    <div>
-        <h1>Clayt Studio</h1>
-        <p>Yakında buradayız...</p>
-        <p>E-posta: ali@claytstudio.com</p>
-        <a href="Products.html">Ürünlerimiz</a>
-    </div>
-</body>
+
+    <header>
+        <div class="container">
+            <h1>Clayt Studio</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Ana Sayfa</a></li>
+                    <li><a href="#">Hakkımızda</a></li>
+                    <li><a href="#">Projeler</a></li>
+                    <li><a href="#">İletişim</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero" class="hero">
+        <div class="container">
+            <h2>Hayalleri Gerçekleştiren Oyun Geliştiricileri</h2>
+            <p>Yaratıcılığımızı kodlarla birleştirerek unutulmaz deneyimler sunuyoruz.</p>
+        </div>
+    </section>
+
+    <section id="slider-section" class="slider-section">
+        <div class="slider-container">
+            </div>
+        <div class="slider-nav">
+            <button class="prev">&lt;</button>
+            <button class="next">&gt;</button>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>Projelerimiz</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <img src="https://via.placeholder.com/300x200?text=PUBG" alt="PUBG Projesi">
+                    <h3>Battle Royale Deneyimi</h3>
+                    <p>Adrenalin dolu hayatta kalma savaşları için optimize edilmiş, Clayt Studio farkıyla.</p>
+                </div>
+                <div class="project-card">
+                    <img src="https://via.placeholder.com/300x200?text=APEX" alt="APEX Projesi">
+                    <h3>Hızlı ve Stratejik Nişancılık</h3>
+                    <p>Farklı karakter yetenekleri ve takım bazlı stratejilerle sürükleyici bir oyun deneyimi.</p>
+                </div>
+                <div class="project-card">
+                    <img src="https://via.placeholder.com/300x200?text=Next+Game" alt="Sonraki Proje">
+                    <h3>Sıradaki Büyük Macera</h3>
+                    <p>Yeni ve çığır açan oyun mekanikleriyle geleceğin oyunlarını tasarlıyoruz.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Bize Ulaşın</h2>
+            <p>Projelerinizi konuşmak, işbirliği yapmak veya sadece merhaba demek için bize yazın.</p>
+            <form class="contact-form">
+                <input type="text" placeholder="Adınız" required>
+                <input type="email" placeholder="E-posta Adresiniz" required>
+                <input type="text" placeholder="Konu">
+                <textarea placeholder="Mesajınız" rows="5" required></textarea>
+                <button type="submit">Gönder</button>
+            </form>
+            <p class="contact-info">Alternatif olarak bize <a href="mailto:ali@claytstudio.com">ali@claytstudio.com</a> adresinden ulaşabilirsiniz.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Clayt Studio. Tüm Hakları Saklıdır.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script> </body>
 </html>

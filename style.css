@@ -1,17 +1,265 @@
-body { 
-    background-color: #1a1a1a; 
-    color: #eaeaea; 
-    font-family: Arial, sans-serif; 
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    height: 100vh; 
-    margin: 0; 
-    text-align: center; 
+/* Genel Stil */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a2e; /* Koyu morumsu arka plan */
+    color: #e0e0e0; /* Açık gri yazı rengi */
+    line-height: 1.6;
 }
 
-h1 { 
-    font-size: 3rem; 
-    border-bottom: 2px solid #555; 
-    padding-bottom: 10px; 
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Header */
+header {
+    background: #2a2a4e; /* Daha koyu mor */
+    color: #ffffff;
+    padding: 1rem 0;
+    border-bottom: 3px solid #6a05ad; /* Mor çizgi */
+}
+
+header h1 {
+    float: left;
+    margin: 0;
+    font-size: 2rem;
+}
+
+header nav {
+    float: right;
+    margin-top: 10px;
+}
+
+header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+header li {
+    display: inline;
+    padding: 0 15px;
+}
+
+header a {
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+header a:hover {
+    color: #9d50e8; /* Parlak mor vurgu */
+}
+
+/* Hero Section */
+.hero {
+    min-height: 400px;
+    background: url('https://via.placeholder.com/1500x400?text=Clayt+Studio+Banner') no-repeat center center/cover;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    position: relative;
+}
+
+.hero::before { /* Hafif karartma */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero h2 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+    z-index: 1; /* İçeriği öne getir */
+}
+
+.hero p {
+    font-size: 1.5rem;
+    z-index: 1;
+}
+
+/* Slider Section */
+.slider-section {
+    padding: 40px 0;
+    background: #2a2a4e;
+    text-align: center;
+    position: relative;
+}
+
+.slider-container {
+    display: flex;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    width: 80%; /* Resimlerin genişliği */
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+.slider-container img {
+    width: 100%;
+    flex-shrink: 0; /* Küçülmesini engelle */
+    display: block;
+    border-radius: 10px;
+}
+
+.slider-nav button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.slider-nav button:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.slider-nav .prev {
+    left: 10%;
+}
+
+.slider-nav .next {
+    right: 10%;
+}
+
+/* Projeler */
+.projects {
+    padding: 40px 0;
+    text-align: center;
+    background: #1a1a2e;
+}
+
+.projects h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #9d50e8;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    background: #2a2a4e;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.project-card img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.project-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.project-card p {
+    font-size: 1rem;
+    color: #cccccc;
+}
+
+/* İletişim */
+.contact {
+    padding: 40px 0;
+    text-align: center;
+    background: #2a2a4e;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #9d50e8;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    padding: 12px;
+    border: 1px solid #5a5a7e; /* Koyu morumsu kenarlık */
+    border-radius: 5px;
+    background: #1a1a2e;
+    color: #e0e0e0;
+    font-size: 1rem;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #888;
+}
+
+.contact-form button {
+    padding: 12px 20px;
+    background: #6a05ad; /* Mor buton */
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+    background: #9d50e8; /* Buton hover efekti */
+}
+
+.contact-info {
+    margin-top: 20px;
+    font-size: 1.1rem;
+}
+
+.contact-info a {
+    color: #9d50e8;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background: #1a1a2e;
+    color: #cccccc;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9rem;
+    border-top: 1px solid #3a3a5e;
 }
