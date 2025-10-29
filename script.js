@@ -6,10 +6,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // İstediğin oyun resimlerinin URL'lerini buraya ekle
     // Eğer kendi resimlerin varsa onları da kullanabilirsin
     const images = [
-        'https://via.placeholder.com/1200x500?text=Oyun+1+-+Aksiyon',
-        'https://via.placeholder.com/1200x500?text=Oyun+2+-+Strateji',
-        'https://via.placeholder.com/1200x500?text=Oyun+3+-+Macera',
-        'https://via.placeholder.com/1200x500?text=Oyun+4+-+RPG'
+        'https://placehold.co/1200x500?text=Oyun+1+-+Aksiyon',
+        'https://placehold.co/1200x500?text=Oyun+2+-+Strateji',
+        'https://placehold.co/1200x500?text=Oyun+3+-+Macera',
+        'https://placehold.co/1200x500?text=Oyun+4+-+RPG'
     ];
 
     let currentIndex = 0;
